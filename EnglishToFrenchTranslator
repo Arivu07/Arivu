@@ -1,5 +1,3 @@
-package demojava;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,11 +6,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class EnglishToFrenchTranslator {
+public class EnglishToFrench {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		HashMap<String, String> dataDictionary = new HashMap<String, String>();
+		HashMap<String, String> dataDictionary = new HashMap<String, String>(); 
 		String shakesPeareText = null;
 		String finalWord = null;
 		dataDictionary = convertCsvtoMap();
@@ -23,7 +21,7 @@ public class EnglishToFrenchTranslator {
 
 	public static HashMap<String, String> convertCsvtoMap() {
 		HashMap<String, String> englishFrenchMapper = new HashMap<String, String>();
-		File file = new File("C:/Users/SANTHIYA/Downloads/TranslateWords Challenge/french_dictionary.csv");
+		File file = new File("E:\\Translator\\TranslateWords Challenge\\french_dictionary.csv");
 
 		BufferedReader br = null;
 		try {
@@ -52,7 +50,7 @@ public class EnglishToFrenchTranslator {
 
 		String shakesPeareText = "";
 		File shakespeareTextFile = new File(
-				"C:/Users/SANTHIYA/Downloads/TranslateWords Challenge/t8.shakespeare.txt");
+				"E:\\Translator\\TranslateWords Challenge\\t8.shakespeare.txt");
 
 		int bufferSize = 999999999;
 		BufferedReader buffer = null;
@@ -82,7 +80,7 @@ public class EnglishToFrenchTranslator {
 
 	public static String replaceWords(String text, HashMap<String, String> dataDictionary) {
 
-		File findWords = new File("C:/Users/SANTHIYA/Downloads/TranslateWords Challenge/find_words.txt");
+		File findWords = new File("E:\\Translator\\TranslateWords Challenge\\find_words.txt");
 
 		BufferedReader buffer = null;
 		try {
@@ -112,9 +110,9 @@ public class EnglishToFrenchTranslator {
 	public static void writeFile(String finalWord) {
 		FileWriter fileWrite = null;
 		try {
-			fileWrite = new FileWriter("C:/Users/SANTHIYA/Downloads/TranslateWords Challenge/translator.txt");
+			fileWrite = new FileWriter("E:\\Translator\\TranslateWords Challenge\\translator.txt");
 			fileWrite.write(finalWord);
-			System.out.println("File written into this location - C:/Users/SANTHIYA/Downloads/TranslateWords Challenge/translator.txt");
+			System.out.println("File written into this location - E:\\Translator\\TranslateWords Challenge\\translator.txt");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -140,4 +138,3 @@ public class EnglishToFrenchTranslator {
 		return count;
 	}
 }
-	
