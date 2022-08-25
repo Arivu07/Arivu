@@ -103,9 +103,9 @@ public class EnglishToFrench {
 	public static void writeFile(String finalWord) {
 		FileWriter fileWrite = null;
 		try {
-			fileWrite = new FileWriter("E:\\Translator\\TranslateWords Challenge\\translator.txt");
+			fileWrite = new FileWriter("E:\\Translator\\TranslateWords Challenge\\t8.shakespeare.translated.txt");
 			fileWrite.write(finalWord);
-			System.out.println("File written into this location - E:\\Translator\\TranslateWords Challenge\\translator.txt");
+			System.out.println("File written into this location - E:\\Translator\\TranslateWords Challenge\\t8.shakespeare.translated.txt");
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
