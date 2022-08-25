@@ -95,7 +95,7 @@ public class EnglishToFrench {
 		try {
 			while ((word = buffer.readLine()) != null) {
 				int replaceCount = countMatches(text, word);
-				System.out.println(word + " - " + replaceCount + " Times");
+				System.out.println(word + "," + dataDictionary.get(word) + "," + replaceCount);
 				text = text.replaceAll(word, dataDictionary.get(word));
 
 			}
