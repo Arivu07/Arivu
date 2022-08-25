@@ -9,7 +9,7 @@ import java.util.HashMap;
 public class EnglishToFrench {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 		HashMap<String, String> dataDictionary = new HashMap<String, String>(); 
 		String shakesPeareText = null;
 		String finalWord = null;
@@ -27,7 +27,6 @@ public class EnglishToFrench {
 		try {
 			br = new BufferedReader(new FileReader(file));
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -39,7 +38,6 @@ public class EnglishToFrench {
 				englishFrenchMapper.put(word[0], word[1]);
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -57,20 +55,17 @@ public class EnglishToFrench {
 		try {
 			buffer = new BufferedReader(new FileReader(shakespeareTextFile), bufferSize);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 		String str;
 
 		try {
-			// Holds true till there is nothing to read
 			while ((str = buffer.readLine()) != null) {
 				shakesPeareText = shakesPeareText.concat(str);
 
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -86,7 +81,6 @@ public class EnglishToFrench {
 		try {
 			buffer = new BufferedReader(new FileReader(findWords));
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -100,7 +94,6 @@ public class EnglishToFrench {
 
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -114,13 +107,11 @@ public class EnglishToFrench {
 			fileWrite.write(finalWord);
 			System.out.println("File written into this location - E:\\Translator\\TranslateWords Challenge\\translator.txt");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			try {
 				fileWrite.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
